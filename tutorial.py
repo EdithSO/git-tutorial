@@ -10,17 +10,16 @@ def print_day(d):
 
 def weekend_or_not(d):
     if 4 < d < 7:
-        return True
+        print("weekend")
     else:
-	return False 
+	pass
 
 
 current = datetime.now()
 print_day(current.weekend())
 if current.weekday() == 4:
     print("TGIF!!!")
-elif weekend_or_not(current.weekday()):
-    print("WEEKEND!")
+weekend_or_not(current.weekday())
 elif current.weekday()==0:
 	print ("Monday")
 else:
