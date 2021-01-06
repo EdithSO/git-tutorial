@@ -11,15 +11,18 @@ def print_day(d):
 def weekend_or_not(d):
     if 4 < d < 7:
         return True
-    elsereturn False 
+    else:
+	return False 
 
 
 current = datetime.now()
 print_day(current.weekend())
 if current.weekday() == 4:
     print("TGIF!!!")
-elif weekend_or_not(crrent.weekday()):
+elif weekend_or_not(current.weekday()):
     print("WEEKEND!")
+elif current.weekday()==0:
+	print ("Monday")
 else:
     days_till_weekend = 5 - current.weekday()
     print(f"{dats_till_weekend} left to weekend...")
